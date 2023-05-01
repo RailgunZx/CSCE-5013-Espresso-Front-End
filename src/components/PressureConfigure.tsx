@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './PressureConfigure.css'
 import "normalize.css";
 import "@blueprintjs/core/lib/css/blueprint.css";
@@ -21,7 +21,9 @@ import {
     FocusStyleManager,
     NumericInput,
     Tag,
-    Divider
+    Divider,
+    Slider,
+    SliderProps
 } from "@blueprintjs/core";
   
   FocusStyleManager.onlyShowFocusOnTabs();
@@ -38,11 +40,25 @@ ChartJS.register(
 
 
 const PressureConfigure: React.FC = () => {
+  const [timeSliderOne, setTimeSliderOne] = useState<number>(0);
+  const [timeSliderTwo, setTimeSliderTwo] = useState<number>(0);
+  const [timeSliderThree, setTimeSliderThree] = useState<number>(0);
+
+  const [pressureSliderOne, setPressureSliderOne] = useState<number>(0);
+  const [pressureSliderTwo, setPressureSliderTwo] = useState<number>(0);
+  const [pressureSliderThree, setPressureSliderThree] = useState<number>(0);
+
+  const sliderMaxTime = 60;
+  const sliderMaxPressure = 10;
 
   const options = {
     responsive: true,
     scales: {
       y: {
+        beginAtZero: true,
+        grace: '5%'
+      },
+      x: {
         beginAtZero: true
       }
     },
@@ -51,39 +67,80 @@ const PressureConfigure: React.FC = () => {
         position: 'top' as const,
       },
       title: {
-        display: true,
-        text: 'Chart.js Line Chart',
+        display: false,
+        text: 'Pressure (bar)',
       },
     },
   };
 
-  const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  const labels = [0, timeSliderOne, timeSliderOne + timeSliderTwo, timeSliderOne + timeSliderTwo + timeSliderThree];
 
-  const actualData = [69, 70, 95, 60, 35, 20, 69]
+  const actualData = [0, pressureSliderOne, pressureSliderTwo, pressureSliderThree]
 
   const data = {
     labels,
     datasets: [
       {
-        label: 'Dataset 1',
+        label: 'Pressure (bar)',
         data: actualData,
-        borderColor: 'rgb(255, 99, 132)',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        borderColor: 'rgb(240, 248, 255)',
+        backgroundColor: 'rgb(240, 248, 255)',
       },
     ],
   };
+
+  const handleOkButton = () => {
+
+  }
+
+  const handleCancelButton = () => {
+
+  }
 
   return (
     <div className="mainDiv">
         <div className="header">
             Pressure
         </div>
-      <Line options={options} data={data} />
+        <div className="graph-container">
+          <Line options={options} data={data} />
+        </div>
+        <hr />
       <div className="options-section">
-
+        <div className="options-panel">
+          <div className="header">1: preinfuse</div>
+          <div className="options-panel-section">
+            <div>duration: {timeSliderOne} seconds</div>
+            <Slider min={0} max={sliderMaxTime} onChange={setTimeSliderOne} value={timeSliderOne} stepSize={1} labelStepSize={sliderMaxTime}></Slider>
+            <br />
+            <div>pressure: {pressureSliderOne} bar</div>
+            <Slider min={0} max={sliderMaxPressure} onChange={setPressureSliderOne} value={pressureSliderOne} stepSize={1} labelStepSize={sliderMaxPressure}></Slider>
+          </div>
+        </div>
+        <div className="options-panel">
+        <div className="header">2: rinse and hold</div>
+        <div className="options-panel-section">
+            <div>duration: {timeSliderTwo} seconds</div>
+            <Slider min={0} max={sliderMaxTime} onChange={setTimeSliderTwo} value={timeSliderTwo} stepSize={1} labelStepSize={sliderMaxTime}></Slider>
+            <br />
+            <div>pressure: {pressureSliderTwo} bar</div>
+            <Slider min={0} max={sliderMaxPressure} onChange={setPressureSliderTwo} value={pressureSliderTwo} stepSize={1} labelStepSize={sliderMaxPressure}></Slider>
+          </div>
+        </div>
+        <div className="options-panel">
+        <div className="header">3: decline</div>
+        <div className="options-panel-section">
+            <div>duration: {timeSliderThree} seconds</div>
+            <Slider min={0} max={sliderMaxTime} onChange={setTimeSliderThree} value={timeSliderThree} stepSize={1} labelStepSize={sliderMaxTime}></Slider>
+            <br />
+            <div>pressure: {pressureSliderThree} bar</div>
+            <Slider min={0} max={sliderMaxPressure} onChange={setPressureSliderThree} value={pressureSliderThree} stepSize={1} labelStepSize={sliderMaxPressure}></Slider>
+          </div>
+        </div>
       </div>
       <div className="footer">
-      
+      <div><Button fill intent='primary' onClick={handleCancelButton}>Cancel</Button></div>
+      <div><Button fill intent='primary' onClick={handleOkButton}>Ok</Button></div>
       </div>
     </div>
   );

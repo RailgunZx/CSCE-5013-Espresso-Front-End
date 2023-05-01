@@ -1,7 +1,7 @@
 html{
   --color-1: #001848;
   --color-2: #301860;
-  --color_3: #483078;
+  --color-3: #483078;
   --color-4: #604878;
   --color-5: #906090;
 
@@ -17,7 +17,18 @@ html{
 }
 .main-window{
   background-color: var(--color-2);
+  /*width: 50%;
+  height: 75%;*/
   width: 50%;
-  height: 75%;
+  aspect-ratio: 4/3;
   border-radius: 15px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 768px){
+  .main-window{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
 }
