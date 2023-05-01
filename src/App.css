@@ -19,7 +19,8 @@ html{
   background-color: var(--color-2);
   /*width: 50%;
   height: 75%;*/
-  width: 50%;
+  width: 1000px;
+  max-width: 100%;
   aspect-ratio: 4/3;
   border-radius: 15px;
   overflow: hidden;
