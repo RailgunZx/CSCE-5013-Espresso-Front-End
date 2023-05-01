@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/CSCE-5013-Espresso-Front-End/static/css/main.d7ea4bca.css",
+    "main.js": "/CSCE-5013-Espresso-Front-End/static/js/main.fc330721.js",
+    "static/js/787.bc1fae1a.chunk.js": "/CSCE-5013-Espresso-Front-End/static/js/787.bc1fae1a.chunk.js",
+    "static/media/blueprint-icons-20.eot?": "/CSCE-5013-Espresso-Front-End/static/media/blueprint-icons-20.5e4c0405ed6ed9b8dccd.eot",
+    "static/media/blueprint-icons-20.ttf?": "/CSCE-5013-Espresso-Front-End/static/media/blueprint-icons-20.12e371e97427623c5364.ttf",
+    "static/media/blueprint-icons-16.eot?": "/CSCE-5013-Espresso-Front-End/static/media/blueprint-icons-16.0a3e913af17fc72a69cf.eot",
+    "static/media/blueprint-icons-16.ttf?": "/CSCE-5013-Espresso-Front-End/static/media/blueprint-icons-16.f48c674917140edc3135.ttf",
+    "static/media/blueprint-icons-20.woff?": "/CSCE-5013-Espresso-Front-End/static/media/blueprint-icons-20.fb8f4957d362b96448dc.woff",
+    "static/media/blueprint-icons-16.woff?": "/CSCE-5013-Espresso-Front-End/static/media/blueprint-icons-16.9bd12ab178a554d2f53a.woff",
+    "static/media/blueprint-icons-20.woff2?": "/CSCE-5013-Espresso-Front-End/static/media/blueprint-icons-20.3ab530512ec0659585f0.woff2",
+    "static/media/blueprint-icons-16.woff2?": "/CSCE-5013-Espresso-Front-End/static/media/blueprint-icons-16.79a4001b654c178d82ff.woff2",
+    "index.html": "/CSCE-5013-Espresso-Front-End/index.html",
+    "main.d7ea4bca.css.map": "/CSCE-5013-Espresso-Front-End/static/css/main.d7ea4bca.css.map",
+    "main.fc330721.js.map": "/CSCE-5013-Espresso-Front-End/static/js/main.fc330721.js.map",
+    "787.bc1fae1a.chunk.js.map": "/CSCE-5013-Espresso-Front-End/static/js/787.bc1fae1a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7ea4bca.css",
+    "static/js/main.fc330721.js"
+  ]
+}
