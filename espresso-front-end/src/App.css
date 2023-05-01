@@ -1,0 +1,23 @@
+html{
+  --color-1: #001848;
+  --color-2: #301860;
+  --color_3: #483078;
+  --color-4: #604878;
+  --color-5: #906090;
+
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  justify-content: center;
+	height: 100vh;
+	background-color: var(--color-1);
+}
+.main-window{
+  background-color: var(--color-2);
+  width: 50%;
+  height: 75%;
+  border-radius: 15px;
+}
