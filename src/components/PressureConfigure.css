@@ -13,7 +13,7 @@ html{
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    color:aliceblue;
+    color:rgb(240, 248, 255);
 }
 .mainDiv hr{
     width: 100%;
@@ -53,21 +53,16 @@ html{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
-
-@media only screen and (max-width: 768px){
-    .options-section{
-        flex-direction: column;
-        overflow-y: scroll;
-    }
+    overflow: hidden;
 }
 
 .options-panel{
     background-color: var(--color-1);
     width: 30%;
     aspect-ratio: 1/1;
-    overflow: hidden;
+    max-height: 100%;
     border-radius: 15px;
+    overflow: hidden;
 }
 .options-panel-section{
     padding:15% 8% 15% 8%;
@@ -83,4 +78,24 @@ html{
 .footer div{
     width: 20%;
     
+}
+
+@media only screen and (max-width: 768px){
+    .options-section{
+        flex-direction: column;
+        justify-content: safe space-evenly;
+        overflow-y: scroll;
+    }
+    .options-panel{
+        width: 500px;
+        max-width: 100%;
+        aspect-ratio: unset;
+        overflow: visible;
+        margin: 1em;
+        
+    }
+    .options-panel .header{
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
 }

@@ -107,6 +107,7 @@ const PressureConfigure: React.FC = () => {
         </div>
         <hr />
       <div className="options-section">
+        
         <div className="options-panel">
           <div className="header">1: preinfuse</div>
           <div className="options-panel-section">
@@ -117,6 +118,7 @@ const PressureConfigure: React.FC = () => {
             <Slider min={0} max={sliderMaxPressure} onChange={setPressureSliderOne} value={pressureSliderOne} stepSize={1} labelStepSize={sliderMaxPressure}></Slider>
           </div>
         </div>
+
         <div className="options-panel">
         <div className="header">2: rinse and hold</div>
         <div className="options-panel-section">
@@ -127,16 +129,17 @@ const PressureConfigure: React.FC = () => {
             <Slider min={0} max={sliderMaxPressure} onChange={setPressureSliderTwo} value={pressureSliderTwo} stepSize={1} labelStepSize={sliderMaxPressure}></Slider>
           </div>
         </div>
+
         <div className="options-panel">
         <div className="header">3: decline</div>
-        <div className="options-panel-section">
-            <div>duration: {timeSliderThree} seconds</div>
-            <Slider min={0} max={sliderMaxTime} onChange={setTimeSliderThree} value={timeSliderThree} stepSize={1} labelStepSize={sliderMaxTime}></Slider>
-            <br />
-            <div>pressure: {pressureSliderThree} bar</div>
-            <Slider min={0} max={sliderMaxPressure} onChange={setPressureSliderThree} value={pressureSliderThree} stepSize={1} labelStepSize={sliderMaxPressure}></Slider>
+          <div className="options-panel-section">
+              <div>duration: {timeSliderThree} seconds</div>
+              <Slider min={0} max={sliderMaxTime} onChange={setTimeSliderThree} value={timeSliderThree} stepSize={1} labelStepSize={sliderMaxTime}></Slider>
+              <br />
+              <div>pressure: {pressureSliderThree} bar</div>
+              <Slider min={0} max={sliderMaxPressure} onChange={setPressureSliderThree} value={pressureSliderThree} stepSize={1} labelStepSize={sliderMaxPressure}></Slider>
+            </div>
           </div>
-        </div>
       </div>
       <div className="footer">
       <div><Button fill intent='primary' onClick={handleCancelButton}>Cancel</Button></div>
