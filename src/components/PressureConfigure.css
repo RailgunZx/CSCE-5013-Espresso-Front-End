@@ -12,7 +12,7 @@ html{
 
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /*overflow: hidden;*/
     color:rgb(240, 248, 255);
 }
 .mainDiv hr{
@@ -82,16 +82,19 @@ html{
 
 @media only screen and (max-width: 768px){
     .options-section{
+        display: grid;
+        height: auto;
         flex-direction: column;
-        justify-content: safe space-evenly;
+        justify-content: space-evenly;
         overflow-y: scroll;
     }
     .options-panel{
         width: 500px;
-        max-width: 100%;
+        max-width: 100vw;
         aspect-ratio: unset;
         overflow: visible;
         margin: 1em;
+        white-space: nowrap;
         
     }
     .options-panel .header{

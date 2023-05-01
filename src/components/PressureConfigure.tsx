@@ -62,6 +62,7 @@ const PressureConfigure: React.FC = () => {
         beginAtZero: true
       }
     },
+    tension: 0.2,
     plugins: {
       legend: {
         position: 'top' as const,
@@ -90,7 +91,7 @@ const PressureConfigure: React.FC = () => {
   };
 
   const handleOkButton = () => {
-
+    
   }
 
   const handleCancelButton = () => {
@@ -107,7 +108,7 @@ const PressureConfigure: React.FC = () => {
         </div>
         <hr />
       <div className="options-section">
-        
+
         <div className="options-panel">
           <div className="header">1: preinfuse</div>
           <div className="options-panel-section">
